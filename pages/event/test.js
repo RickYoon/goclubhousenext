@@ -13,8 +13,6 @@ import {
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const event = (events) => {
-  const router = useRouter();
-
   //   const router = useRouter();
   //   const { id } = router.query;
   //   //   const [item, setItem] = useState({});
@@ -96,17 +94,15 @@ const event = (events) => {
   //     // window.location.href = "https://ios.joinclubhouse.com/event/M8NOG6q7";
   //   };
   //   console.log(events.events[0].title);
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <>
-        <Head>
-          <title>detail</title>
-        </Head>
-        <div style={{ backgroundColor: "#f1efe4" }}>
-          <div>nice</div>
-          {/* <div className="container" style={{ backgroundColor: "#f1efe4" }}>
+
+  return (
+    <>
+      <Head>
+        <title>detail</title>
+      </Head>
+      <div style={{ backgroundColor: "#f1efe4" }}>
+        <div>nice</div>
+        {/* <div className="container" style={{ backgroundColor: "#f1efe4" }}>
         <div onClick={gotoclub} style={{ cursor: "pointer" }}>
           <div className="templetebox">
             <div
@@ -184,10 +180,9 @@ const event = (events) => {
           </div>
         </div>
       </div> */}
-        </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 };
 
 export default event;
