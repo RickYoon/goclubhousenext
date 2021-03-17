@@ -103,12 +103,8 @@ const event = (events) => {
       <>
         <Head>
           <title>detail</title>
-
           <meta property="og:url" content="http://www.bbsetheme.com/" />
-          <meta
-            property="og:title"
-            content="보부상 워드프레스 테마, BBS e-theme"
-          />
+          <meta property="og:title" content={events.events[0].title} />
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
