@@ -25,7 +25,7 @@ const event = (events) => {
       <>
         <Head>
           <title>{events.events[0].title}</title>
-          <meta property="og:url" content="http://www.goClubHouse.com/" />
+          <meta property="og:url" content="http://www.goClubHouse.co.kr/" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={events.events[0].title} />
           <meta
