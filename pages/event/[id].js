@@ -16,88 +16,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const event = (events) => {
   const router = useRouter();
+  console.log(router);
 
-  //   const router = useRouter();
-  //   const { id } = router.query;
-  //   //   const [item, setItem] = useState({});
-
-  //   //   const API_URL = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/queryDetailEvent?eventID=${id}`;
-
-  //   //   function getData() {
-  //   //     Axios.get(API_URL).then((res) => {
-  //   //       console.log(res);
-  //   //     });
-  //   //   }
-
-  //   //   useEffect(() => {
-  //   //     // if (id && id > 0) {
-  //   //     getData();
-  //   //     // }
-  //   //   }, []);
-
-  //   //   const url = window.location.href;
-  //   const [events, setEvents] = useState({
-  //     title: "",
-  //     weekday: "",
-  //     moderators: "",
-  //     moderatorsArray: "",
-  //     images: [],
-  //     description: "",
-  //     datetime: "",
-  //     datetimeDB: "",
-  //     club: "",
-  //     url: "",
-  //   });
-  //   // const {
-  //   //   title,
-  //   //   weekday,
-  //   //   moderators,
-  //   //   moderatorsArray,
-  //   //   images,
-  //   //   description,
-  //   //   datetime,
-  //   //   club,
-  //   // } = events; // 비구조화 할당을 통해 값 추출
-
-  //   //   let history = useHistory();
-  //   //   const { id } = useParams();
-  //   // const back = () => {
-  //   //   history.push("/");
-  //   // };
-
-  //   useEffect(() => {
-  //     loadUsers();
-  //   }, []);
-
-  //   const loadUsers = async () => {
-  //     const result = await Axios({
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       url: `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/queryDetailEvent?eventID=${id}`,
-  //     }).then((res) => {
-  //       setEvents({
-  //         ...events,
-  //         title: res.data[0].title,
-  //         weekday: res.data[0].weekday,
-  //         images: res.data[0].images,
-  //         description: res.data[0].description,
-  //         club: res.data[0].club,
-  //         moderators: res.data[0].moderators,
-  //         moderatorsArray: res.data[0].moderatorsArray,
-  //         url: res.data[0].url,
-  //         datetimeKorea: res.data[0].datetimeKorea,
-  //       });
-
-  //       console.log(events);
-  //     });
-  //   };
-
-  //   const gotoclub = () => {
-  //     // window.location.href = "https://ios.joinclubhouse.com/event/M8NOG6q7";
-  //   };
-  //   console.log(events.events[0].title);
   if (router.isFallback) {
     return <div>Loading...</div>;
   } else {
@@ -105,7 +25,7 @@ const event = (events) => {
       <>
         <Head>
           <title>{events.events[0].title}</title>
-          <meta property="og:url" content="http://www..com/" />
+          <meta property="og:url" content="http://www.goClubHouse.com/" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={events.events[0].title} />
           <meta
@@ -169,7 +89,7 @@ const event = (events) => {
               <div className="sharebox">
                 <div className="col50">
                   <CopyToClipboard
-                    text={"aa"}
+                    text={`https://goclubhousenext12.vercel.app${router.asPath}`}
                     onCopy={() => alert("복사되었습니다!")}
                   >
                     <button>
@@ -182,7 +102,7 @@ const event = (events) => {
                   <FacebookShareButton
                     size={64}
                     round={true}
-                    url={`http://www.goclubhouse.co.kr/event/xe2AOvd3`}
+                    url={`https://goclubhousenext12.vercel.app${router.asPath}`}
                   >
                     <FacebookIcon size={38} round />
                   </FacebookShareButton>
@@ -192,7 +112,7 @@ const event = (events) => {
                   <LinkedinShareButton
                     size={64}
                     round={true}
-                    url={`http://www.goclubhouse.co.kr/event/xe2AOvd3`}
+                    url={`https://goclubhousenext12.vercel.app${router.asPath}`}
                   >
                     <LinkedinIcon size={38} round />
                   </LinkedinShareButton>
