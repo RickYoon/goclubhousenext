@@ -110,46 +110,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>goClubHouse | welcome!</title>
-        <meta name="title" content="goClubHouse" />
-        <meta
-          name="description"
-          content="goclubhouse 를 통해서 더 많은 이벤트를 만나보세요."
-        />
-        {/* <meta
-          name="keywords"
-          content="클럽하우스, RSVP, clubhouse, goclubhouse, 스타트업, 재테크, 주식, 명상, 인싸, 클하초대장, 클하이벤트"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.goClubHouse.co.kr/" />
-        <meta
-          property="og:image"
-          content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
-        />
-        <meta
-          property="og:title"
-          content="goClubHouse - 클럽하우스를 통해 더 넓은 세상을 만나는 방법"
-        />
-        <meta
-          property="og:description"
-          content="클럽하우스를 통해서 더 많은 이벤트와 사람을 만날 수 있도록 돕습니다."
-        />
-        <meta property="og:site_name" content="goClubHouse" />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:title"
-          content="쇼피랩스 shopeelabs - 마진계산기 & 시장조사"
-        />
-        <meta
-          name="twitter:description"
-          content="쇼피셀러를 위한 모든 툴과 정보를 제공하기 위해서 연구하는 쇼피랩스입니다. 쇼피제품판매를 위해 소요되는 시간을 절약하고, 더 잘팔릴 물건을 올릴 수 있도록 돕도록 하겠습니다."
-        />{" "}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
-          rel="stylesheet"
-        /> */}
-      </Head>
+      <Head></Head>
       <div style={{ backgroundColor: "#f1efe4" }}>
         <Navbar />
         <div className="container mx-auto desktop mb-2 md:mb-10">
