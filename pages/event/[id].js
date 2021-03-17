@@ -31,7 +31,6 @@ const event = (events) => {
             property="og:image"
             content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
           />
-
           <meta property="og:title" content={events.events[0].title} />
           <meta
             property="og:description"

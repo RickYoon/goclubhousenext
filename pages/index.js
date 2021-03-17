@@ -117,7 +117,7 @@ export default function Home() {
           name="description"
           content="goclubhouse 를 통해서 더 많은 이벤트를 만나보세요."
         />
-        <meta
+        {/* <meta
           name="keywords"
           content="클럽하우스, RSVP, clubhouse, goclubhouse, 스타트업, 재테크, 주식, 명상, 인싸, 클하초대장, 클하이벤트"
         />
@@ -148,7 +148,7 @@ export default function Home() {
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
           rel="stylesheet"
-        />
+        /> */}
       </Head>
       <div style={{ backgroundColor: "#f1efe4" }}>
         <Navbar />
