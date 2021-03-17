@@ -41,47 +41,55 @@ const event = (events) => {
         <Navbar />
         <div style={{ backgroundColor: "#f1efe4" }}>
           <div className="container" style={{ backgroundColor: "#f1efe4" }}>
-            <div style={{ cursor: "pointer" }}>
-              <div className="templetebox">
-                <div
-                  className="w-full mt-3 rounded-md"
-                  onClick={() => {
-                    console.log(events.eventCode);
-                  }}
-                >
-                  <div className="card-body">
-                    <p className="card-subtext" style={{ fontSize: "12px" }}>
-                      {events.events[0].datetimeKorea}
-                    </p>
-                    <h5 className="card-title" style={{ fontSize: "15px" }}>
-                      {events.events[0].title}
-                    </h5>
-                    {events.events[0].images.map((kk, index) => (
-                      <div className="avatarbox">
-                        <div className="innerbox">
-                          <img
-                            src={kk}
-                            alt="Avatar"
-                            width="40px"
-                            style={{ borderRadius: "50%", marginLeft: "5px" }}
-                          ></img>
-                          <div style={{ fontSize: "10px" }}>
-                            {events.events[0].moderators[index]}
+            <a
+              href={`https://www.joinclubhouse.com${router.asPath}`}
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              <div style={{ cursor: "pointer" }}>
+                <div className="templetebox">
+                  <div
+                    className="w-full mt-3 rounded-md"
+                    onClick={() => {
+                      console.log(events.eventCode);
+                    }}
+                  >
+                    <div className="card-body">
+                      <p className="card-subtext" style={{ fontSize: "12px" }}>
+                        {events.events[0].datetimeKorea}
+                      </p>
+                      <h5 className="card-title" style={{ fontSize: "15px" }}>
+                        {events.events[0].title}
+                      </h5>
+                      {events.events[0].images.map((kk, index) => (
+                        <div className="avatarbox">
+                          <div className="innerbox">
+                            <img
+                              src={kk}
+                              alt="Avatar"
+                              width="40px"
+                              style={{ borderRadius: "50%", marginLeft: "5px" }}
+                            ></img>
+                            <div style={{ fontSize: "10px" }}>
+                              {events.events[0].moderators[index]}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
 
-                    <p
-                      className="card-subtext mt-3"
-                      style={{ fontSize: "12px" }}
-                    >
-                      {events.events[0].description}
-                    </p>
+                      <p
+                        className="card-subtext mt-3"
+                        style={{ fontSize: "12px" }}
+                      >
+                        {events.events[0].description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
 
             <div className="container">
               <div style={{ textAlign: "center" }}>Share event</div>
