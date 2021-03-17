@@ -103,7 +103,7 @@ const event = (events) => {
       <>
         <Head>
           <title>{events.events[0].title}</title>
-          <meta property="og:url" content="http://www.goclubhouse.com/" />
+          <meta property="og:url" content="http://www..com/" />
           <meta property="og:type" content="website" />
 
           <meta property="og:title" content={events.events[0].title} />
@@ -119,84 +119,87 @@ const event = (events) => {
         </Head>
         <div style={{ backgroundColor: "#f1efe4" }}>
           <div>nice</div>
-          {/* <div className="container" style={{ backgroundColor: "#f1efe4" }}>
-        <div onClick={gotoclub} style={{ cursor: "pointer" }}>
-          <div className="templetebox">
-            <div
-              className="w-full mt-3 rounded-md"
-              onClick={() => {
-                console.log(events.eventCode);
-              }}
-            >
-              <div className="card-body">
-                <p className="card-subtext" style={{ fontSize: "12px" }}>
-                  {events.datetimeKorea}
-                </p>
-                <h5 className="card-title" style={{ fontSize: "15px" }}>
-                  {events.title}
-                </h5>
-                {events.images.map((kk, index) => (
-                  <div className="avatarbox">
-                    <div className="innerbox">
-                      <img
-                        src={kk}
-                        alt="Avatar"
-                        width="40px"
-                        style={{ borderRadius: "50%", marginLeft: "5px" }}
-                      ></img>
-                      <div style={{ fontSize: "10px" }}>
-                        {events.moderators[index]}
+          <div className="container" style={{ backgroundColor: "#f1efe4" }}>
+            {/* <div onClick={gotoclub} style={{ cursor: "pointer" }}>
+              <div className="templetebox">
+                <div
+                  className="w-full mt-3 rounded-md"
+                  onClick={() => {
+                    console.log(events.eventCode);
+                  }}
+                >
+                  <div className="card-body">
+                    <p className="card-subtext" style={{ fontSize: "12px" }}>
+                      {events.datetimeKorea}
+                    </p>
+                    <h5 className="card-title" style={{ fontSize: "15px" }}>
+                      {events.title}
+                    </h5>
+                    {events.images.map((kk, index) => (
+                      <div className="avatarbox">
+                        <div className="innerbox">
+                          <img
+                            src={kk}
+                            alt="Avatar"
+                            width="40px"
+                            style={{ borderRadius: "50%", marginLeft: "5px" }}
+                          ></img>
+                          <div style={{ fontSize: "10px" }}>
+                            {events.moderators[index]}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    ))}
 
-                <p className="card-subtext mt-3" style={{ fontSize: "12px" }}>
-                  {events.description}
-                </p>
+                    <p
+                      className="card-subtext mt-3"
+                      style={{ fontSize: "12px" }}
+                    >
+                      {events.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> */}
+
+            <div className="container">
+              <div style={{ textAlign: "center" }}>Share event</div>
+
+              <div className="sharebox">
+                <div className="col50">
+                  <CopyToClipboard
+                    text={"aa"}
+                    onCopy={() => alert("복사되었습니다!")}
+                  >
+                    <button>
+                      <LivejournalIcon size={38} round />
+                    </button>
+                  </CopyToClipboard>
+                  <div style={{ fontSize: "10px" }}>url복사</div>
+                </div>
+                <div className="col50">
+                  <FacebookShareButton
+                    size={64}
+                    round={true}
+                    url={`http://www.goclubhouse.co.kr/event/xe2AOvd3`}
+                  >
+                    <FacebookIcon size={38} round />
+                  </FacebookShareButton>
+                  <div style={{ fontSize: "10px" }}>facebook</div>
+                </div>
+                <div className="col50">
+                  <LinkedinShareButton
+                    size={64}
+                    round={true}
+                    url={`http://www.goclubhouse.co.kr/event/xe2AOvd3`}
+                  >
+                    <LinkedinIcon size={38} round />
+                  </LinkedinShareButton>
+                  <div style={{ fontSize: "10px" }}>Linkedin</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="container">
-          <div style={{ textAlign: "center" }}>Share event</div>
-
-          <div className="sharebox">
-            <div className="col50">
-              <CopyToClipboard
-                text={"aa"}
-                onCopy={() => alert("복사되었습니다!")}
-              >
-                <button>
-                  <LivejournalIcon size={38} round />
-                </button>
-              </CopyToClipboard>
-              <div style={{ fontSize: "10px" }}>url복사</div>
-            </div>
-            <div className="col50">
-              <FacebookShareButton
-                size={64}
-                round={true}
-                url={`http://www.goclubhouse.co.kr/event/xe2AOvd3`}
-              >
-                <FacebookIcon size={38} round />
-              </FacebookShareButton>
-              <div style={{ fontSize: "10px" }}>facebook</div>
-            </div>
-            <div className="col50">
-              <LinkedinShareButton
-                size={64}
-                round={true}
-                url={`http://www.goclubhouse.co.kr/event/xe2AOvd3`}
-              >
-                <LinkedinIcon size={38} round />
-              </LinkedinShareButton>
-              <div style={{ fontSize: "10px" }}>Linkedin</div>
-            </div>
-          </div>
-        </div>
-      </div> */}
         </div>
       </>
     );
