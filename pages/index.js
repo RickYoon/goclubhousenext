@@ -122,6 +122,11 @@ export default function Home() {
           content="클럽하우스, RSVP, clubhouse, goclubhouse, 스타트업, 재테크, 주식, 명상, 인싸, 클하초대장, 클하이벤트"
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.goClubHouse.co.kr/" />
+        <meta
+          property="og:image"
+          content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
+        />
         <meta
           property="og:title"
           content="goClubHouse - 클럽하우스를 통해 더 넓은 세상을 만나는 방법"
