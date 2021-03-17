@@ -23,7 +23,10 @@ const event = (events) => {
       <>
         <Head>
           <title>{events.events[0].title}</title>
-          <meta property="og:url" content={`https://goclubhouse.co.kr${router.asPath}`}} />
+          <meta
+            property="og:url"
+            content={`https://goclubhouse.co.kr${router.asPath}`}
+          />
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
