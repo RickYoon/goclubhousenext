@@ -102,7 +102,7 @@ const event = (events) => {
     return (
       <>
         <Head>
-          <title>detail</title>
+          <title>{events.events[0].title}</title>
           <meta property="og:url" content="http://www.bbsetheme.com/" />
           <meta property="og:title" content={events.events[0].title} />
           <meta property="og:type" content="website" />
