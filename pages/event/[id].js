@@ -114,7 +114,7 @@ const event = (events) => {
           <meta property="og:site_name" content={events.events[0].title} />
           <meta
             property="og:image"
-            content="http://www.bbsetheme.com/wp-content/uploads/2017/11/bbsetheme_logo.png"
+            content="https://hostnotes-prod.s3.us-west-2.amazonaws.com/1615569793529.png"
           />
         </Head>
         <div style={{ backgroundColor: "#f1efe4" }}>
