@@ -3,8 +3,6 @@ import Axios from "axios";
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbarback from "../src/component/Navbarback";
-
-// import Card from "../src/component/Card";
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -25,7 +23,7 @@ const event = (events) => {
       <>
         <Head>
           <title>{events.events[0].title}</title>
-          <meta property="og:url" content="http://www.goClubHouse.co.kr/" />
+          <meta property="og:url" content={`https://goclubhouse.co.kr${router.asPath}`}} />
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
@@ -156,9 +154,6 @@ export async function getStaticProps(context) {
   const apiUrl = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/queryDetailEvent?eventID=${id}`;
   const res = await Axios.get(apiUrl);
   console.log(res.data);
-  //   const data = res.data;
-  // const kk = [1, 2, 3, 4];
-  //   con
 
   return {
     props: {
