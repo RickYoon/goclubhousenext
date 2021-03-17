@@ -105,7 +105,6 @@ const event = (events) => {
           <title>{events.events[0].title}</title>
           <meta property="og:url" content="http://www..com/" />
           <meta property="og:type" content="website" />
-
           <meta property="og:title" content={events.events[0].title} />
           <meta
             property="og:description"
@@ -114,7 +113,7 @@ const event = (events) => {
           <meta property="og:site_name" content={events.events[0].title} />
           <meta
             property="og:image"
-            content="https://hostnotes-prod.s3.us-west-2.amazonaws.com/1615569793529.png"
+            content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
           />
         </Head>
         <div style={{ backgroundColor: "#f1efe4" }}>
