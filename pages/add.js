@@ -74,7 +74,6 @@ const Add = () => {
   };
 
   const loadUsers = async () => {
-    // const url = "https://www.joinclubhouse.com/event/xkL60q1y";
     try {
       setIsLoading(true);
 
@@ -85,11 +84,9 @@ const Add = () => {
         },
         url: `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/coopangCrawler?url=${text}`,
       }).then((res) => {
-        // console.log(res.data);
-        // console.log(res.data.title);
         console.log(res);
         if (res.data.title.length === 0) {
-          alert("올바른 주소가 아닙니다.");
+          alert("클럽하우스 이벤트 주소가 아닙니다.");
         } else {
           setIsLoading(false);
 
@@ -124,7 +121,8 @@ const Add = () => {
         }
       });
     } catch {
-      alert("url을 정확하게 입력해주세요!");
+      setIsLoading(false);
+      alert("클럽하우스 이벤트 주소가 아닙니다.");
     }
   };
 
@@ -151,6 +149,7 @@ const Add = () => {
                 <input
                   className="bg-purple-white bg-gray-200 shadow rounded border-0 p-3 w-100 mt-0"
                   onChange={onChange}
+                  placeholder="https://www.joinclubhouse.com/event/..."
                   value={text}
                   style={{ fontSize: "12px" }}
                 />

@@ -4,7 +4,11 @@ export default function Navbarback() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="/" style={{ float: "left" }}>
+        <a
+          className="navbar-brand"
+          href="/"
+          style={{ float: "left", fontWeight: "bold" }}
+        >
           goClubHouse
         </a>
         <Link className="navbar-brand" href="/">

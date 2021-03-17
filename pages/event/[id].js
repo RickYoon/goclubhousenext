@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Navbar from "../src/component/Navbar";
+import Navbarback from "../src/component/Navbarback";
 
 // import Card from "../src/component/Card";
 import {
@@ -38,7 +38,7 @@ const event = (events) => {
             content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
           />
         </Head>
-        <Navbar />
+        <Navbarback />
         <div style={{ backgroundColor: "#f1efe4" }}>
           <div className="container" style={{ backgroundColor: "#f1efe4" }}>
             <a
@@ -103,10 +103,10 @@ const event = (events) => {
               <div className="sharebox">
                 <div className="col50">
                   <CopyToClipboard
-                    text={`https://goclubhousenext12.vercel.app${router.asPath}`}
+                    text={"ㅁㅁ"}
                     onCopy={() => alert("복사되었습니다!")}
                   >
-                    <button>
+                    <button style={{ border: "0px" }}>
                       <LivejournalIcon size={38} round />
                     </button>
                   </CopyToClipboard>
@@ -116,7 +116,7 @@ const event = (events) => {
                   <FacebookShareButton
                     size={64}
                     round={true}
-                    url={`https://goclubhousenext12.vercel.app${router.asPath}`}
+                    url={`https://goclubhouse.co.kr${router.asPath}`}
                   >
                     <FacebookIcon size={38} round />
                   </FacebookShareButton>
@@ -126,7 +126,7 @@ const event = (events) => {
                   <LinkedinShareButton
                     size={64}
                     round={true}
-                    url={`https://goclubhousenext12.vercel.app${router.asPath}`}
+                    url={`https://goclubhouse.co.kr${router.asPath}`}
                   >
                     <LinkedinIcon size={38} round />
                   </LinkedinShareButton>
