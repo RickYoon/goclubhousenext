@@ -104,10 +104,20 @@ const event = (events) => {
         <Head>
           <title>detail</title>
 
-          <meta property="og:url" content="https://www.naver.com" key="ogurl" />
-          <meta property="og:site_name" content="siteName" key="ogsitename" />
-          <meta property="og:title" content="pageTitle" key="ogtitle" />
-          <meta property="og:description" content="description" key="ogdesc" />
+          <meta property="og:url" content="http://www.bbsetheme.com/" />
+          <meta
+            property="og:title"
+            content="보부상 워드프레스 테마, BBS e-theme"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="http://www.bbsetheme.com/wp-content/uploads/2017/11/bbsetheme_logo.png"
+          />
+          <meta
+            property="og:description"
+            content="한국형 워드프레스 테마, 플러그인, 독립형 쇼핑몰 솔루션 제작, 반응형웹, 웹접근성, SEO 지원"
+          />
         </Head>
         <div style={{ backgroundColor: "#f1efe4" }}>
           <div>nice</div>
