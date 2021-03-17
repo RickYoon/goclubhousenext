@@ -27,16 +27,17 @@ const event = (events) => {
           <title>{events.events[0].title}</title>
           <meta property="og:url" content="http://www.goClubHouse.co.kr/" />
           <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
+          />
+
           <meta property="og:title" content={events.events[0].title} />
           <meta
             property="og:description"
             content={events.events[0].description}
           />
           <meta property="og:site_name" content={events.events[0].title} />
-          <meta
-            property="og:image"
-            content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
-          />
         </Head>
         <Navbarback />
         <div style={{ backgroundColor: "#f1efe4" }}>
@@ -103,7 +104,7 @@ const event = (events) => {
               <div className="sharebox">
                 <div className="col50">
                   <CopyToClipboard
-                    text={"ㅁㅁ"}
+                    text={`https://goclubhouse.co.kr${router.asPath}`}
                     onCopy={() => alert("복사되었습니다!")}
                   >
                     <button style={{ border: "0px" }}>
