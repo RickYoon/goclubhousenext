@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        {" "}
+        <title>goClubHouse | welcome!</title>
         <meta name="title" content="goClubHouse" />
         <meta
           name="description"
