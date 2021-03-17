@@ -103,6 +103,11 @@ const event = (events) => {
       <>
         <Head>
           <title>detail</title>
+
+          <meta property="og:url" content="https://www.naver.com" key="ogurl" />
+          <meta property="og:site_name" content="siteName" key="ogsitename" />
+          <meta property="og:title" content="pageTitle" key="ogtitle" />
+          <meta property="og:description" content="description" key="ogdesc" />
         </Head>
         <div style={{ backgroundColor: "#f1efe4" }}>
           <div>nice</div>
