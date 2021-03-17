@@ -103,16 +103,18 @@ const event = (events) => {
       <>
         <Head>
           <title>{events.events[0].title}</title>
-          <meta property="og:url" content="http://www.bbsetheme.com/" />
-          <meta property="og:title" content={events.events[0].title} />
+          <meta property="og:url" content="http://www.goclubhouse.com/" />
           <meta property="og:type" content="website" />
+
+          <meta property="og:title" content={events.events[0].title} />
+          <meta
+            property="og:description"
+            content={events.events[0].description}
+          />
+          <meta property="og:site_name" content={events.events[0].title} />
           <meta
             property="og:image"
             content="http://www.bbsetheme.com/wp-content/uploads/2017/11/bbsetheme_logo.png"
-          />
-          <meta
-            property="og:description"
-            content="한국형 워드프레스 테마, 플러그인, 독립형 쇼핑몰 솔루션 제작, 반응형웹, 웹접근성, SEO 지원"
           />
         </Head>
         <div style={{ backgroundColor: "#f1efe4" }}>
