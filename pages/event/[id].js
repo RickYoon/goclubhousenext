@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import Navbar from "../src/component/Navbar";
+
 // import Card from "../src/component/Card";
 import {
   FacebookShareButton,
@@ -116,10 +118,10 @@ const event = (events) => {
             content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
           />
         </Head>
+        <Navbar />
         <div style={{ backgroundColor: "#f1efe4" }}>
-          <div>nice</div>
           <div className="container" style={{ backgroundColor: "#f1efe4" }}>
-            {/* <div onClick={gotoclub} style={{ cursor: "pointer" }}>
+            <div style={{ cursor: "pointer" }}>
               <div className="templetebox">
                 <div
                   className="w-full mt-3 rounded-md"
@@ -129,12 +131,12 @@ const event = (events) => {
                 >
                   <div className="card-body">
                     <p className="card-subtext" style={{ fontSize: "12px" }}>
-                      {events.datetimeKorea}
+                      {events.events[0].datetimeKorea}
                     </p>
                     <h5 className="card-title" style={{ fontSize: "15px" }}>
-                      {events.title}
+                      {events.events[0].title}
                     </h5>
-                    {events.images.map((kk, index) => (
+                    {events.events[0].images.map((kk, index) => (
                       <div className="avatarbox">
                         <div className="innerbox">
                           <img
@@ -144,7 +146,7 @@ const event = (events) => {
                             style={{ borderRadius: "50%", marginLeft: "5px" }}
                           ></img>
                           <div style={{ fontSize: "10px" }}>
-                            {events.moderators[index]}
+                            {events.events[0].moderators[index]}
                           </div>
                         </div>
                       </div>
@@ -154,12 +156,12 @@ const event = (events) => {
                       className="card-subtext mt-3"
                       style={{ fontSize: "12px" }}
                     >
-                      {events.description}
+                      {events.events[0].description}
                     </p>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             <div className="container">
               <div style={{ textAlign: "center" }}>Share event</div>
