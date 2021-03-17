@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "./src/component/Navbar";
-import axios from "axios";
 import Link from "next/link";
-import Axios from "axios";
+import axios from "axios";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
