@@ -109,24 +109,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>goClubHouse</title>
-        <meta property="og:url" content={`https://goclubhouse.co.kr`} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/logo.jpeg"
-        />
-        <meta
-          property="og:title"
-          content="goClubHouse - 클럽하우스를 통해 더 넓은 세상을 만나는 방법"
-        />
-        <meta
-          property="og:description"
-          content="클럽하우스를 통해서 더 많은 이벤트와 사람을 만날 수 있도록 돕습니다."
-        />{" "}
-        <meta property="og:site_name" content="goClubHouse" />
-      </Head>
       <div style={{ backgroundColor: "#f1efe4" }}>
         <Navbar />
         <div className="container mx-auto desktop mb-2 md:mb-10">
@@ -162,11 +144,12 @@ export default function Home() {
                 backgroundColor: "white",
                 textAlign: "center",
                 borderRadius: "100px",
+                cursor: "pointer",
               }}
             >
               <div
                 className="card-body w-50"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: "white", cursor: "pointer" }}
                 onClick={() => {
                   console.log("fromtoday");
                   setSearchtype("fromtoday");
@@ -176,7 +159,7 @@ export default function Home() {
               </div>
               <div
                 className="card-body w-50"
-                style={{ backgroundColor: "gray" }}
+                style={{ backgroundColor: "gray", cursor: "pointer" }}
                 onClick={() => {
                   console.log("newupdates");
                   setSearchtype("newupdates");
@@ -194,11 +177,12 @@ export default function Home() {
                 justifyContent: "center",
                 backgroundColor: "white",
                 textAlign: "center",
+                cursor: "pointer",
               }}
             >
               <div
                 className="card-body w-50"
-                style={{ backgroundColor: "gray" }}
+                style={{ backgroundColor: "gray", cursor: "pointer" }}
                 onClick={() => {
                   console.log("fromtoday");
                   setSearchtype("fromtoday");
@@ -209,7 +193,7 @@ export default function Home() {
               </div>
               <div
                 className="card-body w-50"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: "white", cursor: "pointer" }}
                 onClick={() => {
                   console.log("newupdates");
                   setSearchtype("newupdates");
@@ -252,7 +236,7 @@ export default function Home() {
               >
                 <div
                   className="card rounded-md"
-                  style={{ borderRadius: "12px" }}
+                  style={{ borderRadius: "12px", cursor: "pointer" }}
                 >
                   <div className="card-body rounded-md">
                     <p className="card-subtext" style={{ fontSize: "12px" }}>

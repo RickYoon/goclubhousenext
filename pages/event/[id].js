@@ -40,6 +40,7 @@ const event = (events) => {
           <meta property="og:site_name" content={events.events[0].title} />
         </Head>
         <Navbarback />
+
         <div style={{ backgroundColor: "#f1efe4" }}>
           <div className="container" style={{ backgroundColor: "#f1efe4" }}>
             <a
@@ -97,7 +98,6 @@ const event = (events) => {
                 </div>
               </div>
             </a>
-
             <div className="container">
               <div style={{ textAlign: "center" }}>Share event</div>
 
