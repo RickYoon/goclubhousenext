@@ -282,7 +282,13 @@ export default function Home() {
                           width="40px"
                           style={{ borderRadius: "50%", marginLeft: "5px" }}
                         ></img>
-                        <div style={{ fontSize: "10px" }}>
+                        <div
+                          style={{
+                            fontSize: "10px",
+                            width: "50px",
+                            height: "30px",
+                          }}
+                        >
                           {event.moderators[index]}
                         </div>
                       </div>

@@ -10,7 +10,7 @@ body {
 }
 
 .avatarbox {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -18,7 +18,7 @@ body {
 }
 
 .innerbox {
-  margin-left: 20px;
+  margin-left: 7px;
 }
 
 .rounded-md {

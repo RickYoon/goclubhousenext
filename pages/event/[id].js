@@ -72,7 +72,13 @@ const event = (events) => {
                               width="40px"
                               style={{ borderRadius: "50%", marginLeft: "5px" }}
                             ></img>
-                            <div style={{ fontSize: "10px" }}>
+                            <div
+                              style={{
+                                fontSize: "10px",
+                                width: "50px",
+                                height: "30px",
+                              }}
+                            >
                               {events.events[0].moderators[index]}
                             </div>
                           </div>

@@ -3,6 +3,7 @@ import moment from "moment";
 import axios from "axios";
 import "moment/locale/ko";
 import ReactLoading from "react-loading";
+import Navbarback from "./src/component/Navbarback";
 
 const Add = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -128,93 +129,99 @@ const Add = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#f1efe4" }}>
-      <div className="container mt-3" style={{ backgroundColor: "#f1efe4" }}>
-        <br></br>
-        <br></br>
-        <div className="max-w-lg mx-auto">
-          <h1
-            className="my-4 block text-4xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-            style={{ fontSize: "22px" }}
-          >
-            함께하고 싶은 이벤트를 <br />
-            게시하고 더 많은 사람들과 함께해요
-          </h1>
-          <div className="w-full border p-3 bg-white rounded-md">
-            <form onSubmit={test}>
-              <p className="text-center" style={{ fontSize: "15px" }}>
-                초대링크를 붙여넣고, 초대장 만들기
-              </p>
-              <input
-                className="bg-purple-white bg-gray-200 shadow rounded border-0 p-3 w-100 mt-0"
-                onChange={onChange}
-                value={text}
-                style={{ fontSize: "12px" }}
+    <>
+      <Navbarback />
+      <div style={{ backgroundColor: "#f1efe4" }}>
+        <div className="container mt-3" style={{ backgroundColor: "#f1efe4" }}>
+          <br></br>
+          <br></br>
+          <div className="max-w-lg mx-auto">
+            <h1
+              className="my-4 block text-4xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              style={{ fontSize: "22px" }}
+            >
+              함께하고 싶은 이벤트를 <br />
+              게시하고 더 많은 사람들과 함께해요
+            </h1>
+            <div className="w-full border p-3 bg-white rounded-md">
+              <form onSubmit={test}>
+                <p className="text-center" style={{ fontSize: "15px" }}>
+                  초대링크를 붙여넣고, 초대장 만들기
+                </p>
+                <input
+                  className="bg-purple-white bg-gray-200 shadow rounded border-0 p-3 w-100 mt-0"
+                  onChange={onChange}
+                  value={text}
+                  style={{ fontSize: "12px" }}
+                />
+                <button
+                  className="bg-gray-500 rounded border-0 w-100 p-3 mt-3"
+                  onClick={onReset}
+                >
+                  추가
+                </button>
+              </form>
+            </div>
+            {isLoading ? (
+              <ReactLoading
+                type="cubes"
+                color="black"
+                style={{ textAlign: "center", width: "150px", margin: "auto" }}
               />
-              <button
-                className="bg-gray-500 rounded border-0 w-100 p-3 mt-3"
-                onClick={onReset}
-              >
-                추가
-              </button>
-            </form>
-          </div>
-          {isLoading ? (
-            <ReactLoading
-              type="cubes"
-              color="black"
-              style={{ textAlign: "center", width: "150px", margin: "auto" }}
-            />
-          ) : (
-            <div></div>
-          )}
+            ) : (
+              <div></div>
+            )}
 
-          {showcard === true ? (
-            <div className="container mt-4">
-              <div className="card">
-                <div className="card-body">
-                  <p className="card-subtext" style={{ fontSize: "12px" }}>
-                    {infos.datetime}
-                  </p>
-                  <h5 className="card-title" style={{ fontSize: "15px" }}>
-                    {infos.title}
-                  </h5>
-                  {infos.images.map((kk, index) => (
-                    <div className="avatarbox">
-                      <div className="innerbox">
-                        <img
-                          src={kk}
-                          alt="Avatar"
-                          width="40px"
-                          style={{ borderRadius: "50%", marginLeft: "5px" }}
-                        ></img>
-                        <div style={{ fontSize: "10px" }}>
-                          {infos.moderatorsArray[index]}
+            {showcard === true ? (
+              <div className="container mt-4">
+                <div className="card">
+                  <div className="card-body">
+                    <p className="card-subtext" style={{ fontSize: "12px" }}>
+                      {infos.datetime}
+                    </p>
+                    <h5 className="card-title" style={{ fontSize: "15px" }}>
+                      {infos.title}
+                    </h5>
+                    {infos.images.map((kk, index) => (
+                      <div className="avatarbox">
+                        <div className="innerbox">
+                          <img
+                            src={kk}
+                            alt="Avatar"
+                            width="40px"
+                            style={{ borderRadius: "50%", marginLeft: "5px" }}
+                          ></img>
+                          <div style={{ fontSize: "10px" }}>
+                            {infos.moderatorsArray[index]}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                  <p className="card-subtext mt-3" style={{ fontSize: "12px" }}>
-                    {infos.description}
-                  </p>
+                    ))}
+                    <p
+                      className="card-subtext mt-3"
+                      style={{ fontSize: "12px" }}
+                    >
+                      {infos.description}
+                    </p>
 
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-lg btn-block mt-2"
-                    style={{ width: "100%", marginBottom: "10px" }}
-                    onClick={postEvents}
-                  >
-                    게시하기!
-                  </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-lg btn-block mt-2"
+                      style={{ width: "100%", marginBottom: "10px" }}
+                      onClick={postEvents}
+                    >
+                      게시하기!
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            <div></div>
-          )}
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
