@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Navbar from "./src/component/Navbar";
 import Link from "next/link";
 import axios from "axios";
@@ -110,7 +109,6 @@ export default function Home() {
 
   return (
     <>
-      <Head></Head>
       <div style={{ backgroundColor: "#f1efe4" }}>
         <Navbar />
         <div className="container mx-auto desktop mb-2 md:mb-10">
