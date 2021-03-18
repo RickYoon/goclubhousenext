@@ -30,7 +30,7 @@ const event = (events) => {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="https://goclubhouse.s3.ap-northeast-2.amazonaws.com/test.png"
+            content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com${router.asPath}`}
           />
           <meta property="og:title" content={events.events[0].title} />
           <meta
@@ -153,10 +153,18 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const id = context.params.id;
-  console.log(id);
+  // console.log(id);
   const apiUrl = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/queryDetailEvent?eventID=${id}`;
   const res = await Axios.get(apiUrl);
-  console.log(res.data);
+  // console.log(res.data[0].eventCode);
+  // console.log(res.data[0].eventDate);
+  console.log(res.data[0].viewcount);
+  if (res.data[0].viewcount === 0) {
+    const apiUrltwo = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/capturecard?eventId=${id}`;
+    const restwo = await Axios.get(apiUrltwo);
+  }
+  const apiUrlthree = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/viewCounter?ec=${res.data[0].eventCode}&ed=${res.data[0].eventDate}`;
+  const resthree = await Axios.get(apiUrlthree);
 
   return {
     props: {

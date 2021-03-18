@@ -72,6 +72,11 @@ const Add = () => {
         alert("실패");
       }
     });
+    function delay(timeout) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, timeout);
+      });
+    }
   };
 
   const loadUsers = async () => {
