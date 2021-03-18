@@ -66,7 +66,8 @@ const Add = () => {
 
       if (res.data.dbinsertResult === "success") {
         alert("성공");
-        window.location.href = "/event/mJWjWB8o";
+        console.log(infos.url.split("/")[4]);
+        window.location.href = `/event/${infos.url.split("/")[4]}`;
       } else {
         alert("실패");
       }
