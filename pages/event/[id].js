@@ -16,8 +16,7 @@ const event = (events) => {
   const router = useRouter();
   console.log(router);
   const apiUrlthree = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/viewCounter?ec=${res.data[0].eventCode}&ed=${res.data[0].eventDate}`;
-  const resthree = await Axios.get(apiUrlthree);
-
+  const resthree = Axios.get(apiUrlthree);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
