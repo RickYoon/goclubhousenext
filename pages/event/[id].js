@@ -169,7 +169,7 @@ export async function getStaticProps(context) {
         setTimeout(resolve, timeout);
       });
     }
-    delay(10000);
+    await delay(10000);
     const apiUrltwo = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/capturecard?eventId=${id}`;
     const restwo = await Axios.get(apiUrltwo);
   }
