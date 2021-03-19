@@ -159,12 +159,14 @@ export async function getStaticProps(context) {
   // console.log(res.data[0].eventCode);
   // console.log(res.data[0].eventDate);
   console.log(res.data[0].viewcount);
-  if (res.data[0].viewcount === 0) {
-    const apiUrltwo = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/capturecard?eventId=${id}`;
-    const restwo = await Axios.get(apiUrltwo);
+  if (res.data[0].viewcount == 0) {
+    // const apiUrltwo = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/capturecard?eventId=${id}`;
+    // const restwo = await Axios.get(apiUrltwo);
+  } else {
+    const apiUrlthree = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/viewCounter?ec=${res.data[0].eventCode}&ed=${res.data[0].eventDate}`;
+    const resthree = await Axios.get(apiUrlthree);
+    // console.log(resthree);
   }
-  const apiUrlthree = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/viewCounter?ec=${res.data[0].eventCode}&ed=${res.data[0].eventDate}`;
-  const resthree = await Axios.get(apiUrlthree);
 
   return {
     props: {
