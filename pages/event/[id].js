@@ -33,6 +33,7 @@ const event = (events) => {
             // content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com/event/mJWjWB8o.png`}
             content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com${router.asPath}.png`}
           />
+
           <meta property="og:image:width" content="650" />
           <meta property="og:image:height" content="320" />
           <meta property="og:title" content={events.events[0].title} />
@@ -163,6 +164,12 @@ export async function getStaticProps(context) {
   // console.log(res.data[0].eventDate);
   // console.log(res.data[0].viewcount);
   if (res.data[0].viewcount == 0) {
+    function delay(timeout) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, timeout);
+      });
+    }
+    delay(5000);
     const apiUrltwo = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/capturecard?eventId=${id}`;
     const restwo = await Axios.get(apiUrltwo);
   }
