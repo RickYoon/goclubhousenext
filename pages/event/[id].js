@@ -32,6 +32,8 @@ const event = (events) => {
             property="og:image"
             content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com${router.asPath}`}
           />
+          <meta property="og:image:width" content="650" />
+          <meta property="og:image:height" content="320" />
           <meta property="og:title" content={events.events[0].title} />
           <meta
             property="og:description"
@@ -146,7 +148,7 @@ export default event;
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { id: "xe7XAzbm" } }],
+    paths: [{ params: { id: "xkL60q1y" } }],
     fallback: true,
   };
 }
