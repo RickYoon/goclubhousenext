@@ -146,7 +146,7 @@ export default event;
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { id: "PN69W9gq" } }],
+    paths: [{ params: { id: "xe7XAzbm" } }],
     fallback: true,
   };
 }
@@ -158,7 +158,7 @@ export async function getStaticProps(context) {
   const res = await Axios.get(apiUrl);
   // console.log(res.data[0].eventCode);
   // console.log(res.data[0].eventDate);
-  console.log(res.data[0].viewcount);
+  // console.log(res.data[0].viewcount);
   if (res.data[0].viewcount == 0) {
     const apiUrltwo = `https://ddjw33n2b0.execute-api.ap-northeast-2.amazonaws.com/production/capturecard?eventId=${id}`;
     const restwo = await Axios.get(apiUrltwo);
