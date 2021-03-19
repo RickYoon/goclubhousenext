@@ -30,7 +30,8 @@ const event = (events) => {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com${router.asPath}`}
+            // content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com/event/mJWjWB8o.png`}
+            content={`https://goclubhouse.s3.ap-northeast-2.amazonaws.com${router.asPath}.png`}
           />
           <meta property="og:image:width" content="650" />
           <meta property="og:image:height" content="320" />
